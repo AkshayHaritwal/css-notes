@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyframes and animations</title>
+    <style>
+      .container {
+        background-color: rgb(209, 209, 244);
+      }
+      .box {
+        background-color: aqua;
+        width: 250px;
+        height: 250px;
+        position: relative;
+        animation-name: akshay;
+        /* animation name mein koi bhi naam de sakte hai jis naam se animation bana rahe hai  */
+
+        animation-duration: 2s;
+        /* animation-duration: ;ka matlab hai animation kitni der chalega :;inke bich time likhte hai like 3s s ka matlab hai second */
+
+        animation-iteration-count: 3;
+        /* iska matlab hai animation kitni baar chalega :; inke bich wo number likhte hai jitni baar chalana hai , infinite likhenge too chalta hii rahega  */
+
+        animation-fill-mode: forwards;
+        /* ye karne se jese hii animation 3 baar pura ho jaayega too, ye (to) mein jo property likhi huyi hai uske sath wahi end mein ruk jaayega , isme backward karne se ye animation khatam hone ke baad from wali property ke sath start mein ruk jaayega*/
+
+        animation-timing-function: ease;
+        /* ye by default property hai isme animation normal chalega */
+
+        animation-timing-function: ease-in;
+        /* ease-in karne se animation suru mein slow chalega then tej ho jaayega */
+
+        animation-timing-function: ease-out;
+        /* ease-out karne se animation suru mein tej chalega then slow ho jaayega */
+
+        animation-timing-function: ease-in-out;
+        /* ease-in-out karne se suru mei tej bich mein slow and end mein tej ho jaayega */
+
+        animation-delay: 3s;
+        /* animation-delay: 3s ka matlab hai animation 3sec wait karega then phir suru hoga */
+
+        animation-direction: reverse;
+        /* isse animation ki direction decide kar sakte hai reverse karne se animation ulta chalega other properties bhi hoti hai like alternate (alternate mei same jese aage jaayega uss speed mei pichee aayega and agar aapne iritation count 4 de rakha hai to 2 bar move hoga  ) , alternate reverse etc   */
+      }
+      /* @keyframes identifier {  } @keyframes likhnege then enter to ye keyframes identifer liha hua aayega then idetifier mein wo naam likhna hai jo hmne animation name mein diya tha */
+      @keyframes akshay {
+        from {
+          /* from ka matlab hai animation kaha se start hoga yaha width 200px se animation start hoga */
+          width: 200px;
+          background-color: deeppink;
+        }
+        to {
+          /* to ka matlab hai yaha tak animation chalega yani animation 200px se start hoga and 400px pe end hoga 200px pe iska color pink hoga and jese jese animation aage badta jaayega color yellow mein change hota jaayega */
+          width: 400px;
+          background-color: gold;
+        }
+      }
+
+      .box1 {
+        background-color: aqua;
+        width: 250px;
+        height: 250px;
+        position: relative;
+        animation-name: rohit;
+        animation-duration: 2s;
+      }
+
+      @keyframes rohit {
+        0% {
+          /* iska matlab hai jab animation 0% pe ho too ye wali property apply ho jaaye */
+          top: 0px;
+          left: 0px;
+        }
+
+        25% {
+          /* jab animation 25% pura ho jaaye too ye wali property apply ho jaayegi , number apne hisab se chun sakte hai */
+          top: 250px;
+          left: 0px;
+          /* iska matlab hai jab animation 25% pe aaye to wo top se 250px niche aayega  and left se 0px move karega  */
+        }
+
+        50% {
+          top: 250px;
+          left: 250px;
+          /* iska matlab hai jab animation 50% pe aaye to wo top se 250px niche aayega  and left se 250px move karega   */
+        }
+
+        75% {
+          top: 0px;
+          left: 250px;
+          /* ye karne se 75% pe aane pe top se move nahi hoga but left se 250px move hoga so wo sidha niche se upper jaayega */
+        }
+
+        100% {
+          top: 0px;
+          left: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">This is a box</div>
+    </div>
+    <div class="box1">This is a box</div>
+  </body>
+</html>

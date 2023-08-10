@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation Menu</title>
+    <style>
+      .navbar {
+        background-color: rgb(1, 1, 22);
+        border-radius: 10px;
+      }
+      .navbar li {
+        float: left;
+        /* float left karte hii background hat gaya kyuki ye apne parent se overflow ho gaya so background ko wapis laane ke liye    .navbar ke ander ul ko target karte huye overflow auto karnge to background wapis aa jaayega */
+        list-style: none;
+        /* list style none karne se bullet hat jjayenge  */
+        padding: 4px;
+        margin: 4px;
+        margin-left: 10px;
+      }
+      .navbar ul {
+        overflow: auto;
+        /* .navbar ke ander ul ko target karte huye overflow auto karnge to background wapis aa jaayega */
+      }
+      .navbar a {
+        text-decoration: none;
+        color: white;
+        padding: 4px;
+      }
+      .navbar input {
+        margin-top: 5px;
+        margin-left: 60%;
+        border-radius: 4px;
+      }
+      .navbar button {
+        border-radius: 5px;
+        font-weight: bolder;
+        border: 2px solid rgb(5, 5, 57);
+        background-color: blue;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- yaha header ka use isliye kar rahe hai because ye header ka part hai ye sabse upper aayega  -->
+      <nav class="navbar">
+        <!-- nav tag ko navigation menu banane ke liye use kiya jaata hai  -->
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href=""> About</a></li>
+          <li><a href="">services</a></li>
+          <li><a href="">Contact Us</a></li>
+          <div class="search">
+            <input
+              type="search"
+              name="search"
+              id="search"
+              placeholder="search here"
+            />
+            <button>Search</button>
+           
+          </div>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS display property</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      header {
+        border: 3px solid red;
+        /* yaha header ek block element hai, block element ka matlab hai ye puri width cover karega , hum kewal block element ki width set kar sakte hai inline element ki nahi kar sakte hai yaha iski width set karenge ,then margin auto karenge too pure header ka content center main aa jaayega */
+        width: 1200px;
+        margin: auto;
+      }
+      img {
+        /* img ek inline element hai so iski margin auto karne ke liye sabse pahle iski display block karni hogi then width set karenge ,  then margin auto */
+        display: block;
+        width: 100px;
+        margin: auto;
+      }
+      h1 {
+        font-weight: 700;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-style: italic;
+        text-align: center;
+      
+        /* border: 2px solid black; */
+        width: 400px;
+        margin: auto;
+
+      }
+      .container{
+        border: 4px solid black;
+       
+        width: 1200px;
+
+        margin: auto;
+      }
+      .box {
+        border: 4px solid rgb(238, 97, 97);
+        background-color: rgb(168, 225, 225);
+        padding: 10px;
+        margin: 10px;
+        display: inline-block;
+        /* display inline block karne se content inline bhi rahega and uski width bhi set kar sakte hai , display inline block kare ke baad wo content puri width nahi lega so jo next content hai wo uske aage aa jaayega */
+        width: 300px;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <!-- display block ka matlab hai full width cover karega display block ki hum widht set kar sakte hai  -->
+    <!-- display inline ka matlab hai jitna content hai kewal utni hii space cover karega  , display inline ki hum widht set nahi kar sakte -->
+    <!-- display inline-block ka matlab hai jitna content hai utni space occupy karega and hum iski width bhi set kar sakte hai  -->
+    <header class="cont1">
+      <img src="bike1.jpg" alt="" />
+      <h1>This is an heading</h1>
+    </header>
+    <div class="container">
+      <div class="box">
+        <h4 class="heading">Heading</h4>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente,
+          similique iste voluptatem dolor, repellat a sequi explicabo voluptas
+          numquam maxime pariatur. Non numquam quas incidunt aspernatur nihil
+          libero velit facilis nobis officia laudantium vitae, autem, recusandae
+          suscipit neque assumenda qui consectetur quam. Delectus, repellendus
+          accusamus.
+        </p>
+      </div>
+      <div class="box">
+        <h4 class="heading">Heading</h4>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente,
+          similique iste voluptatem dolor, repellat a sequi explicabo voluptas
+          numquam maxime pariatur. Non numquam quas incidunt aspernatur nihil
+          libero velit facilis nobis officia laudantium vitae, autem, recusandae
+          suscipit neque assumenda qui consectetur quam. Delectus, repellendus
+          accusamus.
+        </p>
+      </div>
+      <div class="box">
+        <h4 class="heading">Heading</h4>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente,
+          similique iste voluptatem dolor, repellat a sequi explicabo voluptas
+          numquam maxime pariatur. Non numquam quas incidunt aspernatur nihil
+          libero velit facilis nobis officia laudantium vitae, autem, recusandae
+          suscipit neque assumenda qui consectetur quam. Delectus, repellendus
+          accusamus.
+        </p>
+      </div>
+      <div class="box">
+        <h4 class="heading">Heading</h4>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente,
+          similique iste voluptatem dolor, repellat a sequi explicabo voluptas
+          numquam maxime pariatur. Non numquam quas incidunt aspernatur nihil
+          libero velit facilis nobis officia laudantium vitae, autem, recusandae
+          suscipit neque assumenda qui consectetur quam. Delectus, repellendus
+          accusamus.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

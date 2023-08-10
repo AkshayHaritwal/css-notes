@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Height, width, border, border radius and Background-image</title>
+    <style>
+      #para1 {
+        background-color: aqua;
+        color: rgb(75, 15, 203);
+
+        height: 100px;
+        /* height property is used to set height , now this para will occupy 100px height  */
+
+        width: 1200px;
+        /* width property is used to set width , now this para will occupy 1200px width */
+
+        border: 4px solid rgb(12, 3, 54);
+        /* border property is used to set border , here 4px is border width solid is border style and then rgb is border color */
+
+        border-radius: 10px;
+        /* border radius property is used to make corners round , high the border radius more the round corner */
+      }
+      #para2 {
+        background-color: greenyellow;
+        color: darkviolet;
+        height: 100px;
+        width: 1200px;
+
+        border-top: 4px solid red;
+        border-bottom: 6px solid rgb(63, 12, 110);
+        border-left: 8px solid rgb(218, 57, 173);
+        border-right: 12px solid rgb(230, 227, 22);
+        /* iss tarah se hum differnt side ke liye different border color set kar sakte hai*/
+
+        border-top-left-radius: 10px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 20px;
+        /* and iss tarah se hum different corners ke liye different radius de sakte hai */
+      }
+      #para3 {
+        height: 1200px;
+        width: 1200px;
+        border: 4px solid black;
+
+        background-image: url(bike1.jpg);
+        /* bacground image property is used to add background image  for that we type background image then url() and add link of that image in url */
+
+        background-repeat: no-repeat;
+        /* background reapeat mein no repeat karne se image repeat nahi hogi ,repeatx se kewal width ki taraf repeat hogi and repeat y se  height ki or repeat hogi  */
+
+        background-position-x: center;
+        /* background postion x se image left-right move hogi ,yaha hum center ki jagah pixal me bhi value de sakte hai  */
+
+        background-position-y: top;
+        /* background postion y se image up-down move hogi */
+        
+        background-position: center center;
+        /*  shorthand for background position, yaha first value x ke liye and second wala y ke liye hai  */
+       
+        background-size: 90px;
+        /* background size property is used to change size of background image  */
+
+        background-size:auto;
+        /* image will be displayed in original size */
+
+        background-size: contain;
+        /* this will strech the image as large as possible to fit in container */
+
+        background-size: cover;
+        /* the image will cover the whole container */
+
+        background-size: 30px 90px;
+        /* here first property value is for width 2nd is for height */
+
+      }
+    
+    </style>
+  </head>
+  <body>
+    <h1>This is biggest and the most important heading in html</h1>
+    <p id="para1">P tag is used to write paragraph in html</p>
+    <p id="para2">P tag is used to write paragraph in html</p>
+    <p id="para3">P tag is used to write paragraph in html </p>
+
+    <h3>
+      This is the third largest and the third most importan heading in html
+    </h3>
+ 
+  </body>
+</html>

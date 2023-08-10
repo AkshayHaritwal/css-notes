@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visibility,display -none,z-index</title>
+    <style>
+      .box {
+        width: 170px;
+        height: 170px;
+        border: 2px solid black;
+      }
+      #box1 {
+        background-color: blue;
+
+        visibility: visible;
+        /* visibility ki default value hoti hai visible ise content visible hota hai  */
+      }
+      #box2 {
+        background-color: rgb(31, 80, 8);
+
+        /* visibility: hidden; */
+        /* visibility hidden karne se element hide ho jaata hai but uski space reserve rahti hai  */
+
+         /* agar aap chate ha ki wo jagah reserve na rahe to phir display ko none kar de  isse wo element and uski space dono hatt jaayegi */
+        /* display: none; */
+      }
+      #box3 {
+        position: relative;
+        top: 40px;
+        z-index: 2;
+        background-color: rgb(202, 50, 192);
+       
+      }
+      #box4 {
+        background-color: rgb(221, 229, 69);
+        /* agar ek box ke upper dusra box aa jaaye too konsa box upper dikhayi de ye specify karta hai z-index, agar aapki position absolute hai, relative hai ,fixed hai ya sticky hai tabhi z-index kam karegi position ki default value hoti hai static z-index uspe kaam nahi karegi  */ 
+        position: relative;
+        /* so yaha humne box 3 and box 4 ki position relative kar di so ab z-index kaam karega ,ab jese hii hum box3 ko top se 4opx karenge to wo box 3 40px nichee kiskega but wo box 4 ke niche hide hota jaayega agar hum usko upper dikhna chate hai too uski z index value box 4 se jyada kar denge to wo box 4 ke upper aa jaayega  */
+        top: 14px;
+        z-index:1;
+        /* zindex ko sidha number mei likhte hai pixal wagera nahi dena hota hai */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media queries</title>
+    <style>
+        .box{
+            background-color: rgb(137, 137, 220);
+            color: black;
+            font-size: 72px;
+            text-align: center;
+            display: none;
+        }
+        /* media queries ka format hai  @media only screen and (min-width:0px) and (max-width:300px)  */
+        @media only screen and (min-width:0px) and (max-width:300px){
+            #box1{
+                /* upper humne display none kar di hai jisse sab gaayab ho gayye , ab humne media quries mein max-width di hai 300px so jese hii screen ki size 300px aayegi ya 300 se kam jaayegi 0px tak uske baad box1 ki display block ho jaayegi and box ka content dihayi dene lag jaayega */
+                display: block;
+
+                background-color: chartreuse;
+                /* to yaha jese hii width 300px ya usse niche aayegi 0px tak  too box1 ka background color greeen ho jaayega */
+
+                /* yaha hum jo css lknege wo width 300px ya usse kam hote hii apply ho jaayegi */
+
+            }
+        }
+
+        @media only screen and (min-width:300px) and (max-width:500px){
+            /* yaha (min-width:300px) and (max-width:500px) iska matlaab hai jab width 300px se 500px ke bich ho tab ye wali media quries ki property apply ho jaaye */
+            #box2{
+                display: block;
+                background-color: gold;
+            }
+        }
+        
+        @media only screen and (min-width:500px) and (max-width:700px){
+            #box3{
+                display: block;
+                background-color: hotpink;
+            }
+        }
+
+        @media only screen and (min-width:700px) and (max-width:900px){
+            #box4{
+                display: block;
+                color: white;
+                background-color: rgb(24, 2, 13);
+            }
+        }
+
+
+        /* iss tarah se hum ye define kar sakte hai ki agar mobile me ye website landscape mode me open ki jaaye to isme kya chnage ho  */
+        @media (orientation:landscape){
+            #box4{
+                display: block;
+                background-color: deeppink;
+            }
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">iphone</div>
+    <div class="box" id="box2">tablet</div>
+    <div class="box" id="box3">computer</div>
+    <div class="box" id="box4">widescreen computer</div>
+    
+</body>
+</html>

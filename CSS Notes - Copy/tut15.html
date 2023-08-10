@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute and nth child pseudo selectors</title>
+    <style>
+        input[type= "text"]{
+            /* iss tarah se hum kewal uss input ko select kar sakte hai jiska type=text hai ,yaha [] in boxes mein jis property wale text ko select karna hai wo likhnege   */
+            background-color: black;
+            color: white;
+        }
+        a[target=_blank]{
+            /* iss tarah se hum kewal uss anchor tag ko select kar sakte hai jiska target _blank hai, agar hum yaha se =_blank hatta de to ye property dono a tag pe apply ho jaayegi */
+            background-color: blue;
+            color: white;
+            font-weight: bolder;
+            
+        }
+       
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+        <input type="text" placeholder="Enter your name">
+        <input type="password" placeholder="Enter your password">
+        <input type="submit" value="submit">
+    </form>
+        <ul>
+        <li class="item" id="item1">item1</li>
+        <li class="item" id="item2">item2</li>
+        <li class="item" id="item3">item3</li>
+        <li class="item" id="item4">item4</li>
+        <li class="item" id="item5">item5</li>
+        </ul>
+        <a href="https://www.google.com/" target="_blank">Google</a>
+        <a href="https://getbootstrap.com/" target="_self">Bootstrap</a>
+    </div>
+    
+    
+</body>
+</html>

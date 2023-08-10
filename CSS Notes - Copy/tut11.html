@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box - flexdirection,wrap,flexflow,justifycontent,alignitem,order,flexgrow,shrink,flexbasis,alignself</title>
+    <style>
+        .container{
+            height: 544px;
+            width: 100%;
+            border: 3px solid blue;
+            display:flex;
+            /* display flex karne se container flex container baan jaayega and iske andar ke sabhi boxes flexitem baan jaayenge ,sabhi box jo pahle puri width le rahe thee ab ek line mein aa gaye  */
+             
+            /* flex properties for the flex container  */
+
+            flex-direction: row;
+            /* flex direction by default row hoti hai so element left se right ki or arrange honge  */
+            
+            /* flex-direction: column; */
+            /* flex direction column karne se element top se bottom ki or arrange honge  */
+           
+            /* flex-direction: row-reverse; */
+            /* flex direction row reverse karne se element right se left ki or arrane honge yaani box first right se pahle number pe aayega */
+
+            /* flex-direction: column-reverse; */
+            /* flex direction column reverse karne se element niche se arrange hona suru honge box first bottom mein aayega and box sixth sabse upper */
+
+            flex-wrap: nowrap;
+            /* by default flex wrap no wrap hota hai iska matlab hai agar hum screen size choti kare to ye element wrap hoke next line mein nahi aayenge  */
+
+            /* flex-wrap: wrap; */
+            /* flex wrap karne se jese hii aap screen ki size choti karoge too box next line mee aate jaayenge and screen size badi karenge too wapis ek line mein aate jaayenge  */
+
+            /* flex-wrap: wrap-reverse; */
+            /* rap reverse karne se jese hi screen size choti hogi too element reverse direction mein wrap honge yaani upper ki orr next line mein jaate jaayenge  */
+
+            /* flex-flow: row-reverse wrap; */
+            /* flex flow shortcut hai for flex direction and flex wrap ke liye pahle flex direction ki property likhnte hai then flex wrap ki */
+
+            /* justify-content: center; */
+            /* justify content center karne se container ka pura content horizontally center mein aa jaayega   */
+
+            /* justify-content: space-between; */
+            /* space between karne se sabhi boxes ke bich mein barabr space aa jaayegi but corner pe space nahi aayegi */
+
+            /* justify-content: space-evenly; */
+            /* space evenly karne se sabhi boxes ke bich equal space aa jaayegi including corners */
+
+            /* justify-content: space-around; */
+            /* justify-content: space-around;karne se sbhi boxes ke bich barabar space aa jaayegi but corner pe space kam aayegi  */
+
+            /* align-items: flex-start; */
+            /* align-items: flex-start; ye by default hota hai isse item start mein chala jaayega  */
+
+            /* align-items: center; */
+            /* align-items: center; karne se sabhi item vertically center mein aa jaayenge upper niche barabr space aa jaayegi  */
+
+            /* align-items: flex-end; */
+            /* flex end karne se item container ke end mein chala jaayega  */
+
+           
+
+
+
+
+        }
+        .item{
+            width: 100px;
+            height: 100px;
+            
+            background-color: rgb(173, 173, 227);
+            border: 2px solid black;
+            padding: 2px;
+            margin: 10px;
+        }
+        #item1{
+            /* flex properties for flex item  */
+
+           order: 2;
+
+           /* iss tarahh se hum apne content ka order change kar sakte hai jiska order jyada hoga wo last mein chala jaayega, yaha baki boxes ka order by default 0 hai isliye box 1 ka order 2 karne se wo last mein chala gaya agar box 3 ka order agar 3 ya or koi higher number kar de too wo last mein chala jaayega */
+        }
+        #item2{
+            flex-grow: 3;
+            /* flex grow 3 karne se jese hii aap screen ki size badi karnege too item2 wala box jyada tezi se bada hoga compare too other ,jiska number jyada hoga wo jyada teji se grow hoga and kam wala kam speed se  */ 
+            /* felx grow and flex shrink property ko use karne ke liye flex wrap ko set karna hoga no wrap */
+
+        }
+        #item3{
+            flex-shrink: 4;
+            /* flex shrink ka matlab hai jab screen size choti hogi too sabse jyada ye shrink ya patla hoga as compare too others */
+
+        }
+        #item4{
+            flex-basis: 300px;
+            /* flex basis ki madad se default size change kar sakte hai  */
+
+            /* when flex direction is set to row then flex basis will control width , */
+            /* when flex direction is set to column then flex basis will control height , */
+
+            align-self: flex-start;
+            /* align-self: flex-start; karne se box fourth box  vertically starting mei chala jaayega */
+
+            align-self: flex-end;
+            /* align-self: flex-end; karne se box fourth box vertically  end mei chala jaayega */
+
+            align-self: center;
+            /* align-self: center; karne se box fourth box vertically  center chala jaayega */
+
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>This is a flex box tutorial</h1>
+    <div class="container">
+    <div class="item" id="item1">first box</div>
+    <div class="item" id="item2">second box</div>
+    <div class="item" id="item3">third box</div>
+    <div class="item" id="item4">fouth box</div>
+   
+</div>
+    
+</body>
+</html>

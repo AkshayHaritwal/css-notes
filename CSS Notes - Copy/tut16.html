@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box shadow and Text shadow</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .card{
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid red;
+            background-color: rgb(188, 188, 243);
+            box-shadow: 10px 13px yellow;
+            /* agar box ke piche shadow deni hai too sabse pahle box shadow likhenge then x axis ki value yani shadow left se kitni right ki or kiske then y axis ki value yani shadow top se kitni  niche kiske gi  ,then uske baad color jo shadow ke rup mein display hoga , agar aapko box shadow left side and upper display karwani hai too negative number use kare ,agar box shadow box ke andar chaiye too  iss tarah set kar sakte hai -
+
+             box-shadow: inset 10px 13px yellow; inset likte hi box shadow andar ki taraf aa jayegi*/
+
+            box-shadow: 10px 13px 20px yellow;
+            /* yaha humne jo third wala 20px use kiya hai ye hai blur radius ye color ko blur karega and jese jese hum iski value badayenge ye color ko utna hi blur karta jaayega  */
+
+            box-shadow: 10px 13px 20px 30px yellow;
+            /* yaha humne jo fourth property use ki hai 30px ye hai spread radius , ye shadow ko charo taraf spread kar dega  */
+           
+        }
+        #car1 h3{
+            text-shadow: 3px 1px 4px  white;
+            /* text shadow and box shaodow same hai only differnce is that text shadow text ke liye kaam karegi and box shadow box ke liye and dono ki property ya value set karne ka tarika bhi same hai x axis y axis then blur then color and yaha bhi shadow upper and left lejaane ke liye negative number use kare */
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card" id="car1">
+        <h3>card1</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+          consequuntur quaerat totam, earum quo pariatur explicabo incidunt
+          dolores qui beatae nesciunt! Explicabo dicta nisi, fuga, dolorem
+          sapiente nostrum ab adipisci dignissimos praesentium pariatur
+          doloremque culpa sunt error voluptatem saepe quaerat.
+        </p>
+      </div>
+      <div class="card" id="car2">
+        <h3>card2</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+          consequuntur quaerat totam, earum quo pariatur explicabo incidunt
+          dolores qui beatae nesciunt! Explicabo dicta nisi, fuga, dolorem
+          sapiente nostrum ab adipisci dignissimos praesentium pariatur
+          doloremque culpa sunt error voluptatem saepe quaerat.
+        </p>
+      </div>
+      <div class="card" id="car3">
+        <h3>card3</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+          consequuntur quaerat totam, earum quo pariatur explicabo incidunt
+          dolores qui beatae nesciunt! Explicabo dicta nisi, fuga, dolorem
+          sapiente nostrum ab adipisci dignissimos praesentium pariatur
+          doloremque culpa sunt error voluptatem saepe quaerat.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

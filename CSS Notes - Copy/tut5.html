@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin auto,float,clear,text align</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+
+        }
+        .container{
+            background-color: rgb(160, 220, 100);
+            border: 4px solid black;
+            width: 900px;
+            margin:auto;
+            /* yaha container ka margin auto karne se pura container center mein aa jaayega but margin auto karne ke liye aapko width deni jaruri hai   */
+
+        }
+        .item{
+            background-color: rgb(159, 236, 236);
+            color: rgb(1, 1, 23);
+            border: 3px solid red;
+            margin: 5px;
+            padding: 20px;
+          
+           
+        }
+        #fruits{
+            float: left;
+            /* yaha float left karne se #fruits wala pura box float hoke left mein aa jayega , yaha aapkoo dhyan rakhna hai ki total width hoti hai 100% and aapne 2 boxes ko width de rakhi hai 50-50% then usme margin 0 hona chaiye kyuki puri 100% width cover ho chuki hai agar aap margin dena chate hai to phir width % kam karni padegi */
+            width: 48%;
+            
+
+        }
+        #computer{
+            float: left;
+            width: 48%;
+            
+        }
+        #stationary{
+            /* float: left; */
+            /* yaha agar stationary ki float left property hata de and width 100% kar de too hum deknge ki float left wale content uske upper aa rahe hai usko overlap kar rahe hai , agar hum ye nahi chate too ek property use karenge wo hai  clear: left; isse jo content left mein float kar raha hai wo isko overlap nahi karega but right mein flow karne wala karega agar hum dono ka over lapping nahi chate to clear both kar denge   */
+            
+            clear: left;
+            width: 100%;
+        }
+        h3,p{
+            text-align: left;
+            /* yaha h3 and paragraph ka text align left  karne se text left mein chala jaayega  */
+            text-align:right ;
+            /* yaha h3 and paragraph ka text align right  karne se text right mein chala jaayega  */
+            text-align: center;
+            /* yaha h3 and paragraph ka text align center  karne se text center mein chala jaayega  */
+
+            text-align: justify;
+            /* yaha h3 and paragraph ka text align justify karne se text by default wali normal postion  mein chala jaayega  */
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to my store</h1>
+        
+            <!-- iss tarah se hum ek hii div ko id and class de sakte hai  -->
+            <h3>Fruits</h3>
+            <p id="fruitspara" class="para">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat vitae incidunt in modi quam, eaque earum est? Doloribus, et! Eos aliquid adipisci modi, fugit voluptatem quis excepturi quisquam similique et ! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut ad similique reiciendis? Esse neque inventore fuga, iste explicabo aspernatur!
+
+            </p>
+
+        </div>
+
+        <div id="computer" class="item">
+            
+            <h3>computer</h3>
+            <p id="computerpara" class="para">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ipsum magnam blanditiis molestiae, placeat laudantium adipisci, sequi odit voluptatem aperiam voluptatibus praesentium iure pariatur nemo quas dicta hic cupiditate Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quod suscipit totam beatae perspiciatis doloribus, eveniet odio iste obcaecati.
+            </p>
+
+        </div>
+
+        <div id="stationary" class="item">
+           
+            <h3>stationary</h3>
+            <p id="stationarypara" class="para">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia beatae dicta cumque! Possimus similique praesentium doloremque unde, illo quasi saepe dolores at quos totam doloribus accusamus. Mollitia tempora sapiente ut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores culpa sequi laudantium at rerum vero sapiente distinctio odio repellendus?
+            </p>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

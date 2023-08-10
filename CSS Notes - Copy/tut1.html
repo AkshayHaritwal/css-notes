@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> slector in css , colors in css</title>
+
+   
+    <style>
+   
+      h1 {
+        /* iss tarah se hum kisi tag ko select karke uski styling kar sakte hai this is called elemnt selector  */
+
+        background-color: yellow;
+        /*background color is used to change the background color   */
+
+        color: rgb(179, 83, 163);
+        /* color is used to change the text color  , here we have given color value in rgb  */
+
+      }
+
+      .p1 {
+        /* .p1 this is called class selector */
+        /* iss tarah hum .phir class ka naam deke uss class wale content ki styling kar sakte hai  */
+
+        background-color: #f34f;
+        /* here we have given background value in # format */
+      }
+
+
+      #pp1 {
+        /* This is called id selector */
+        /* iss tarah se hum #phir id ka naam deke uss id wale content ki styling kar sakte hai */
+
+        background-color: fuchsia;
+       
+        color: black;
+      }
+
+      span,footer {
+        /* This is called grouping selectors  */
+        /* iss tarah se hum ek sath kayi elements ko select karke style kar sakte hai multiple element ko select karne ke liye  ,(coma) lagakar likte jaao and id and class ko bhi issi tarah select kar sakte hai */
+        background-color: royalblue;
+        color: white;
+      }
+
+      h3{
+        background-color: red;
+        background-color: blue; 
+        /* yaha  backround color blue display hoga kyuki css me jo property baad me likhi hoti hai wo apply hogi */
+      }
+
+      h4{
+        background-color: yellow !important;
+        background-color: green;
+        /* yaha background-color yellow display hoga beacause humne usme important property likh di hai so usko koi over write nahi kar sakta hai */
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>This is a paragraph</h1>
+   
+
+    <p class="p1">This is 101 paragraph</p>
+    <!-- Agar hum particular kisi paragrph ko style karna chate ha to uss paragraph ko class de sakte hai , we can give same class to multiple elements  -->
+
+    <p id="pp1">This is pp1 paragraph</p>
+    <!-- Agar hum particular kisi paragrph ko style karna chate ha to uss paragraph ko id de  sakte hai but it is advisable to give every element a different class -->
+
+    <span>This is span</span>
+    <footer>This is footer</footer>
+
+
+    <h3>This is heading number 3</h3>
+    <h4>This is heading number 4</h4>
+
+    
+  </body>
+</html>

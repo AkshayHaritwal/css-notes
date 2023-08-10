@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>more selectors</title>
+    <style>
+        h1{
+            background-color: rgb(177, 177, 228);
+            color: white;
+            font-weight: bolder;
+            text-align: center;
+        }
+        div p{
+            /* iss tarah se hum div ke andar jitne bhi paragraph hai unko select kar sakte hai , chae wo p div ke kitne bhi andar ho means mano agar div mein li hai and li mein p hai tab bhi ye wal property lagu hogi because yaha humne likha hai div ke p ko style kar do */
+            background-color: chartreuse;
+            color: rgb(6, 6, 82);
+            font-weight: bold;
+        }
+        div li p{
+            /* iss tarah se hum kewal uss paragraph ko select kar sakte hai jo div mein bhi li mein hai , sabse pahle div hai phir div mein li hai and li mein p hai so issi format mein yaha likhenge   */
+            background-color: gold;
+        }
+
+        div > p{
+            /* agar hum iss tarah se liknege too iska matlab hai div ke andar jo indipentent paragraph hai yani jo or kisi tag mein nahi likhe huye hai unpe ye property apply ho jaayegi like this   <p>This an paragraph</p>  ye hai independent paragraph kyuki ye or kisi tag ke andar like li etc mein nahi hai  */
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>This is an heading</h1>
+    <div class="container">
+        <div class="row">
+            <p>This an paragraph</p> 
+        </div>
+        <p>This is another paragraph</p>
+    </div>
+    <p>this is outer most paragraph</p>
+
+    <div class="list">
+        <li><p>This is an paragraph inside li</p></li>
+    </div>
+    <div class="cont1">
+        <p>paragraph number five</p>
+    </div>
+    
+</body>
+</html>

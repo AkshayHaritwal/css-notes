@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+
+        }
+        .container{
+            display: flex;
+            background-color: rgb(209, 209, 241);
+            height: 80vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            background-color: royalblue;
+            height: 200px;
+            width: 200px;
+            border-radius: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all;
+            transition-duration: 2s;
+            transition-timing-function: ease-in;
+            
+
+        }
+        .box:hover{
+            transform: rotate(360deg);
+            /* transform ka matlab hai jese hii box pe hover karenege too isk andar wali property apply ho jaayegi yaha transform: rotate(360deg);ka matlab hai ki jese hii box pe hover karenge too box 360deg gumennega yaha rotate ki jagah or bhi values hoti hai like this-   */
+
+            transform: skew(90deg);
+            /* issse box skew ho jaayega 90 deg tak  */
+
+            transform: scale(3);
+            /* transform scale 3 karne se jese hii ispe hover karenge too ye 3 gunna bada ho jayega */
+           
+            transform: translateX(40px);
+            /* translate x 40px karne se box 40px right ki or ksikega  and negative number dene se left ki or kiske ga*/
+          
+            transform: translatey(40px);
+            /* translate y 40px karne se box 40px bottom ki or ksikega  and negative number dene se top ki or kiske ga*/
+        
+            
+          
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            This is a box
+        </div>
+    </div>
+    
+</body>
+</html>

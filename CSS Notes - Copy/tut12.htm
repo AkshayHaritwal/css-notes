@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Size units-vh, vw, em and rem</title>
+    <style>
+      html {
+        font-size: 25px;
+      }
+      .container {
+        font-size: 10px;
+        border: 2px solid red;
+     
+        height: 100vh;
+        /* yaha height 100vh (viewport height) karne se container ke height pure page ke barabar ho jaayegi  */
+
+        width: 100vw;
+        /* yaha width 100vw (viewport width) karne se container ke width pure page ke barabar ho jaayegi */
+
+
+      }
+      h1 {
+        text-align: center;
+      }
+      #first {
+        font-size: 10em;
+
+        /* yaha font size 10em ka matlab hai parent ke size ka 10 gunna , agar 8 hota too parent ke size ka 8 gunna jitna number hoga utna gunaa ho jayega too yaha parent hai container uski size hai 10px so too 10px ka 10 gunna ho jaayega 100px */
+
+        padding: 3em; 
+        /* agar humne font size 10em set kar di and ab hum padding 3 em set karenge to iska matlab hai font size ka 3 gunna to yaha padding ho jaayega 300px yaha jitna em set karenge wo font size ka utna gunna ho jaayega */
+
+      }
+      #second{
+
+        /* font-size: 3rem; */
+        padding: 3rem;
+        /* agar hum html jo ki root element hai usko font size dede 25px and yaha fontsize and padding agar 3rem set kare too iska matlab hai html ki font size ka 3 gunna yaha jitni rem de rakhi hai utna gunna to yaha 3 rem de rakhi hai to 25*3=75px  */
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="first">This is first heading</h1>
+      <h1 id="second">This is second heading</h1>
+      <h1 id="third">This is third heading</h1>
+    </div>
+  </body>
+</html>
